@@ -5,9 +5,10 @@ import javax.persistence.*;
 @Table(name="hotel")
 public class Hotel {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
-    public int getId(){
+    public Integer getId(){
         return this.id;
     }
     public String getName(){

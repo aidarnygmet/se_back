@@ -13,14 +13,11 @@ public class HotelController {
     @Autowired
     private HotelRepo hotelRepo;
 
-    @RequestMapping ("/hotel")
+    @GetMapping ("/hotel")
     public List<Hotel> listAll(Model model){
         List<Hotel> listHotels = hotelRepo.findAll();
         model.addAttribute("listHotels", listHotels);
         return listHotels;
     }
-
-    public String getHotel(){
-        return "shit";
-    }
+    
 }
